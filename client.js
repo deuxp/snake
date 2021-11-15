@@ -13,6 +13,12 @@ const connect = function () {
   conn.on('data', data => {
     console.log('Server said: ', data);
   })
+
+  conn.on('connect', () => {
+    console.log(`TCP: connection established`);
+    conn.write('Name: RAT')
+  })
+
   //// returns the connection as an object ////
   return conn; 
 }
