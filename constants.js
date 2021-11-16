@@ -1,6 +1,6 @@
 const IP = 'localhost';
 const PORT = 50541;
-const NAME = 'Name: RAT' // max 3 characters
+const NAME = 'Name: RAT'; // max 3 characters
 
 const KEYMAP = {
 
@@ -10,7 +10,7 @@ const KEYMAP = {
   s: 'Move: down',
   d: 'Move: right',
 
-// canned messages
+  // canned messages
   t: 'Say: hadouken!',
   y: 'Say: Ssssssss',
   u: 'Say: sonic boom!',

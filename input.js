@@ -1,4 +1,4 @@
-const { KEYMAP } = require('./constants')
+const { KEYMAP } = require('./constants');
 
 let connection; // default undefined -> gets passed the connection from the function call on the other page and put in this global scope.. clever.
 
@@ -19,9 +19,10 @@ const handleUserInput = key => {
   // Exit: check for ctrl+c
   if (key === '\u0003') {
     process.exit();
-  };
+  }
   /// Movement keys: w,a,s,d /// Canned message: t,y,u ///
-  if (KEYMAP[key]) { /// Guard: against random key press crashing the game
+  /// Guard: against random key press crashing the game ///
+  if (KEYMAP[key]) {
     connection.write(KEYMAP[key]);
   }
 };
