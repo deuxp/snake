@@ -30,5 +30,5 @@ module.exports = {
 // Establishing a connection:
 // ================================================
 // 1. Use Node [net] library with the [createConnnection] method --> object called "conn"
-// 2. th conn object that Node returned represeents the connection with the server
+// 2. the conn object that Node returned represeents the connection with the server
 // 3. now use the methods of the "conn" object to interact with the server
