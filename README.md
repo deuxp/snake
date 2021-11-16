@@ -14,12 +14,18 @@ Before you can run this client, you will need to be running the server side whic
 
 !["snakes!"](https://www.motherjones.com/wp-content/uploads/2021/04/04262021_gartersnakes.png?w=1200&h=630&crop=1)
 
-*.gif courtesy of Tania Rascia*
-
+*gif courtesy of Tania Rascia*
 !["snake game gif, courtesy of Tania Rascia"](https://raw.githubusercontent.com/taniarascia/snek/master/snek.gif)
-
 
 ## Getting Started
 
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
+
+## Gameplay
+
+Use `wasd` movements to control the snake. Snake cannot turn 180 degrees, only 90.
+
+Use `t`, `y`, or `u` to spam a canned message to the other snakes!
+
+Use `ctrl + C` to exit the game.
