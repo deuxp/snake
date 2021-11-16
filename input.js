@@ -1,5 +1,10 @@
+// const connect = require('./play.js');
+
+let connection; // default undefined -> gets passed the connection from the function call on the other page and put in this global scope.. clever.
+
 //// Object Listens for keyboard input ////
-const setupInput = function() {
+const setupInput = function(conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
@@ -17,6 +22,10 @@ const handleUserInput = key => {
     process.exit();
   }
   // define what happens when a certain input is detected
+  if (key === 'w') connection.write('Move: up');
+  if (key === 'a') connection.write('Move: left');
+  if (key === 's') connection.write('Move: down');
+  if (key === 'd') connection.write('Move: right');
 
 }
 
