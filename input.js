@@ -1,10 +1,8 @@
-// const connect = require('./play.js');
-
 let connection; // default undefined -> gets passed the connection from the function call on the other page and put in this global scope.. clever.
 
 //// Object Listens for keyboard input ////
 const setupInput = function(conn) {
-  connection = conn;
+  connection = conn; // the connection module passed here from the play.js file is reassigned tot he global scop of this file; ready to be used by any function here.. including the key event handler . wink wink
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
@@ -21,15 +19,19 @@ const handleUserInput = key => {
     console.log('you exited with the exit key');
     process.exit();
   }
-  // define what happens when a certain input is detected
+  // movement keys
   if (key === 'w') connection.write('Move: up');
   if (key === 'a') connection.write('Move: left');
   if (key === 's') connection.write('Move: down');
   if (key === 'd') connection.write('Move: right');
+  // msg in a can
+  if (key === 't') connection.write('Say: hadouken!');
+  if (key === 'y') connection.write('Say: Ssssssss');
+  if (key === 'u') connection.write('Say: sonic boom!');
 
-}
+};
 
 module.exports = {
   setupInput,
   handleUserInput
-}
+};
