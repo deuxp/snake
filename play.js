@@ -16,8 +16,8 @@ const { connect } = require('./client');
 // ================================================
 
 console.log('Connecting ... ...');
-//|\ call the connection module 
-connect();
 
-//|\ call the input module
-setupInput();
+
+//|\ call the input module -> pass it the connection object, to be used in the global scope of the input module by reassigning it to a global variable declared as undefined from within said function.
+// now that connection object can be used from the input module, which means that all of the connection object methods are available on that page and can be accessed by the behaviour of the stdin input evironment or listeners.
+setupInput(connect());
