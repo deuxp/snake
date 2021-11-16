@@ -16,17 +16,14 @@ const connect = function () {
 
   conn.on('connect', () => {
     console.log(`TCP: connection established`);
-    conn.write('Name: RAT')
+    conn.write('Name: RAT') // <-- this is sent as soon as the connection is established
   })
 
-  //// returns the connection as an object ////
   return conn; 
 }
-
 module.exports = {
   connect,
 }
-
 
 // ================================================
 // Establishing a connection:
