@@ -21,7 +21,7 @@ const connect = function() {
   //// Guard: interpret incoming data as test ////
   conn.setEncoding('utf8');
   conn.on('data', data => {
-    console.log('Gottfried, Server said: ', data);
+    console.log('Server says: ', data);
   });
 
   conn.on('connect', () => {
