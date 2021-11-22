@@ -15,15 +15,19 @@ const setupInput = function(conn) {
   return stdin;
 };
 
+let intID;
 const handleUserInput = key => {
   // Exit: check for ctrl+c
   if (key === '\u0003') {
     process.exit();
   }
+  clearInterval(intID);
   /// Movement keys: w,a,s,d /// Canned message: t,y,u ///
   /// Guard: against random key press crashing the game ///
   if (KEYMAP[key]) {
-    connection.write(KEYMAP[key]);
+    intID = setInterval(() => {
+      connection.write(KEYMAP[key]);
+    }, 100);
   }
 };
 
