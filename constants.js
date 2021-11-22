@@ -1,5 +1,3 @@
-const { stdin } = require("process");
-
 const IP = 'localhost';
 const PORT = 50541;
 const NAME = 'Name: RAT'; // max 3 characters
@@ -28,7 +26,7 @@ const LASTKEY = {
   s: 'w',
   d: 'a'
   
-}
+};
 
 
 module.exports = {

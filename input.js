@@ -37,7 +37,7 @@ const handleUserInput = key => {
       }, 50);
     }
   }
-  backwards = LASTKEY[key]
+  backwards = LASTKEY[key];
 };
 
 
